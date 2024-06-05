@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@100;300;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,500;0,900;1,100;1,300;1,700&display=swap");
+
+body {
+    background-color: black;
+    height: 90vh;
+    margin: 0;
+}
+
+.card_container {
+    display: flex;
+    
+    justify-content: center;
+    margin: 10px auto;
+    max-width: 1200px;
+}
+
+.cards {
+    position: relative;
+    width: 100%;
+    max-width: 293px;
+    height: 98vh;
+    overflow: hidden;
+    margin:0px 3px;
+}
+
+.cards img {
+    width: 100%;
+    height: auto;
+    opacity: 1;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.cards:hover img {
+    transform: scale(1.1);
+    filter: grayscale(100%);
+}
+
+.CardOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: rgba(3, 3, 3, 0.3);
+}
+
+.CardOverlay:hover {
+    background-color: rgba(3, 3, 3, 0.8);
+}
+
+.CardContent {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 420px 40px;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.CardContent h1 {
+    font-weight: bold;
+    font-size: 27px;
+}
+
+.CardContent a {
+    color: rgb(8, 219, 219);
+}
+
+.btn {
+    margin-top: 20px;
+    color: white;
+    cursor: pointer;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.cards:hover .CardContent {
+    transform: translateY(0);
+}
+
+.cards:hover .btn {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+h3 {
+    font-size: 21px;
+}
+
+
+@media screen and (min-width:200px) and (max-width:350px){
+    .card_container {
+        flex-direction: column;
+    }
+
+    .cards {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .CardContent {
+     padding-top: 20%;
+        
+    }
+    
+}
+@media screen and (min-width:351px) and (max-width:470px){
+    .card_container {
+        flex-direction: column;
+    }
+
+    .cards {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .CardContent {
+     padding-top: 40%;
+        
+    }
+
+}
+@media screen and (min-width:471px) and (max-width:600px){
+    .card_container {
+        flex-direction: column;
+    }
+
+    .cards {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .CardContent {
+     padding-top: 50%;
+        
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .card_container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .cards {
+        max-width: 45%;
+        height: auto;
+    }
+
+    .CardContent {
+     padding-top: 0.2%;
+    }
+
+    .CardContent h1 {
+        font-size: 25px;
+    }
+
+    .CardContent p {
+        font-size: small;
+    }
+}
+
